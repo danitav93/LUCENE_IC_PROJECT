@@ -92,7 +92,7 @@ public class Lucene {
 		}
 		
 	}
-	//dfadsfas
+	//dfadsfasdfawfqawfq
 	
 	private static String getQueryForParser(IdCardEntity idCardEntity) {
 		return Constant.IC_NUMBER+":"+idCardEntity.getIcNumber()+"^7"+
