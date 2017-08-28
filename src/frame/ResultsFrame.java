@@ -11,6 +11,7 @@ import javax.swing.border.EmptyBorder;
 
 import javax.swing.Box;
 import javax.swing.JLabel;
+import java.awt.Color;
 
 public class ResultsFrame extends JFrame {
 
@@ -43,7 +44,9 @@ public class ResultsFrame extends JFrame {
 		contentPane.add(hitsBox);
 		
 		JLabel labelNumerOfResult = new JLabel("");
-		labelNumerOfResult.setBounds(114, 11, 206, 14);
+		labelNumerOfResult.setForeground(Color.RED);
+		labelNumerOfResult.setBounds(186, 11, 96, 14);
+		labelNumerOfResult.setText(results.size()+" ICs found.");
 		contentPane.add(labelNumerOfResult);
 	}
 }
