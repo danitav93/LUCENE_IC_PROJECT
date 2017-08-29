@@ -2,8 +2,10 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_111"/>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="files"/>
 	<classpathentry kind="lib" path="C:/Users/Daniele Tavernelli/Desktop/librerie java/lucene-6.6.0/lucene-6.6.0/core/lucene-core-6.6.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Daniele Tavernelli/Desktop/librerie java/lucene-6.6.0/lucene-6.6.0/analysis/common/lucene-analyzers-common-6.6.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Daniele Tavernelli/Desktop/librerie java/lucene-6.6.0/lucene-6.6.0/queryparser/lucene-queryparser-6.6.0.jar"/>
+	<classpathentry kind="lib" path="miglayout15-swing.jar" sourcepath="miglayout-src.zip"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -11,7 +11,7 @@ public class Methods {
 	 */
 	private static Set<String> dates = new HashSet<String>();
 	static {
-	    for (int year = 1900; year < 2050; year++) {
+	    for (int year = Constant.MinYearBirthDate; year < Constant.MaxYearBirthDate; year++) {
 	        for (int month = 1; month <= 12; month++) {
 	            for (int day = 1; day <= daysInMonth(month); day++) {
 	                StringBuilder date = new StringBuilder();

@@ -7,11 +7,16 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import org.apache.lucene.document.Document;
 
+import utility.Constant;
 
 import javax.swing.Box;
+import javax.swing.DefaultListModel;
 import javax.swing.JLabel;
 import java.awt.Color;
+import javax.swing.JList;
+import javax.swing.JScrollPane;
 
 public class ResultsFrame extends JFrame {
 
@@ -36,17 +41,24 @@ public class ResultsFrame extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		Box hitsBox = Box.createVerticalBox();
-		hitsBox.setBounds(10, 33, 414, 217);
-		for(int i=0;i<results.size();++i) {
-           hitsBox.add(new JLabel(results.get(i)));
-        }
-		contentPane.add(hitsBox);
+		DefaultListModel<String> data = new DefaultListModel<>();
+		for (int i=0;i<results.size();i++) {
+			data.addElement( results.get(i));
+		}
 		
 		JLabel labelNumerOfResult = new JLabel("");
 		labelNumerOfResult.setForeground(Color.RED);
 		labelNumerOfResult.setBounds(186, 11, 96, 14);
 		labelNumerOfResult.setText(results.size()+" ICs found.");
 		contentPane.add(labelNumerOfResult);
+		
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(428, 51, -427, 200);
+		contentPane.add(scrollPane);
+		
+		JList<String> list = new JList<String>(data);
+		contentPane.add(list);
+		list.setBounds(0, 34, 434, 228);
 	}
 }
